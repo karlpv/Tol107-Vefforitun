@@ -8,7 +8,7 @@
   <meta property="og:title" content="Veitingastaðurinn">
   <meta property="og:description" content="Um Veitingastaðinn, saga og starfsfólk.">
   <meta property="og:image" content="./myndir/sharing.jpg">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="../styles.css">
 
 </head>
 
@@ -20,9 +20,7 @@
       þú sækir.
     </p>
   </header>
-
-  <p><a href="#efni">Beint í efni</a></p>
-
+  <p class="sr-only"><a href="#efni">Beint í efni</a></p>
   <nav>
     <ul>
       <li><a href="../index.html">Forsíða</a></li>
@@ -35,12 +33,14 @@
   <main id="efni">
     <form method="post" action=".">
       <p>Pantaðu mat, borð eða bæði!</p>
+      <div class="box-container">
       <fieldset>
         <legend>Panta borð</legend>
         <div>
           <label for="when">Hvenær viltu koma?</label>
           <input type="datetime-local" id="when" name="when">
         </div>
+      </div>
         <div>
           <label for="size">Hve mörg?</label>
           <select id="size">
@@ -56,14 +56,14 @@
             <option>10</option>
           </select>
         </div>
-        <div>
+        <div class="">
           <label for="special">Viltu taka eitthvað fram?</label>
           <textarea id="special"></textarea>
         </div>
       </fieldset>
       <fieldset>
         <legend>Panta mat</legend>
-        <div>
+        <div class="">
           <label for="food1">Réttur #1</label>
           <input id="food1" list="foods">
         </div>
@@ -129,28 +129,33 @@
   </main>
 
   <footer>
-    <h2>Opnunartími</h2>
-    <dl>
-      <dt>Mánudaga til fimmtudaga</dt>
-      <dd>09:00–18:00</dd>
-      <dt>Föstudaga</dt>
-      <dd>10:00–22:00</dd>
-      <dt>Laugardaga</dt>
-      <dd>11:00–22:00</dd>
-      <dt>Sunnudaga</dt>
-      <dd>Lokað</dd>
-    </dl>
-
-    <h2>Hér erum við</h2>
-    <ul>
-      <li>Veitingastaðurinn ehf.</li>
-      <li>Aðalgata 10</li>
-      <li>100 Reykjavík</li>
-      <li><a href="tel:3334567">Sími 333-4567</a></li>
-      <li>
-        <a href="mailto:veitingastadur@example.org">veitingastadur@example.org</a>
-      </li>
-    </ul>
+    <div class="content">
+      <div class="box">
+        <h2>Opnunartími</h2>
+        <dl>
+          <dt>Mánudaga til fimmtudaga</dt>
+          <dd>09:00–18:00</dd>
+          <dt>Föstudaga</dt>
+          <dd>10:00–22:00</dd>
+          <dt>Laugardaga</dt>
+          <dd>11:00–22:00</dd>
+          <dt>Sunnudaga</dt>
+          <dd>Lokað</dd>
+        </dl>
+      </div>
+    <div class="box">  
+      <h2>Hér erum við</h2>
+      <ul>
+        <li>Veitingastaðurinn ehf.</li>
+        <li>Aðalgata 10</li>
+        <li>100 Reykjavík</li>
+        <li><a href="tel:3334567">Sími 333-4567</a></li>
+        <li>
+          <a href="mailto:veitingastadur@example.org">veitingastadur@example.org</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   </footer>
 </body>
 

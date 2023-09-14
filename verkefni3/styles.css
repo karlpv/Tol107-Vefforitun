@@ -37,7 +37,6 @@ nav ul {
 nav ul li {
   display: inline;
   padding: 1rem;
-  text-decoration: #2f0505;
 }
 
 html {
@@ -83,7 +82,8 @@ main {
 }
 
 /* Style for the main container */
-#efni {
+#efni,
+.box-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -93,19 +93,45 @@ main {
 .bottombox {
   flex: 0 0 calc(50% - 20px);
   box-sizing: border-box;
-  border: 1px solid #ccc;
   padding: 10px;
   margin: 10px;
   text-align: left;
-  
+  padding-bottom: 4rem;
+  border-bottom: 2px solid#ffe7ae;
 }
 
 .lastbox {
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  max-height: 50%;
+  max-height: auto;
   padding: 10px;
   margin: 10px;
-  text-align: auto;
+  text-align: center;
+}
+
+.lastbox .box {
+  list-style-type: none;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+a,
+a:active {
+  text-decoration: none;
+  color: darkred;
+}
+a:hover {
+  color: #ffe7ae;
+}
+
+.tafla thead {
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.tafla tr {
+  height: 40px;
+}
+tr:nth-child(even) {
+  background: #ffe7ae;
 }

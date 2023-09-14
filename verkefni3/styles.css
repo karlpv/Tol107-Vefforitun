@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+
+* {
+  font-family: "Lora", serif;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  background-color: #2f0505;
+  color: blanchedalmond;
+  width: auto;
+  display: block;
+  border-bottom: 8px solid #ffe7ae;
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+nav {
+  background-color: #fff9ee;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  text-align: center;
+  padding: 1em;
+}
+
+nav ul li {
+  display: inline;
+  padding: 1rem;
+  text-decoration: #2f0505;
+}
+
+html {
+  font-size: 16px;
+}
+
+footer {
+  background-color: #2f0505;
+  color: bisque;
+  width: auto;
+  display: block;
+  border-top: 8px solid #ffe7ae;
+  padding: 1em;
+  text-align: center;
+  margin-top: 0;
+}
+
+footer .content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+footer .content .box {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+
+main {
+  padding: 1rem;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Style for the main container */
+#efni {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topbox,
+.bottombox {
+  flex: 0 0 calc(50% - 20px);
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  
+}
+
+.lastbox {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  max-height: 50%;
+  padding: 10px;
+  margin: 10px;
+  text-align: auto;
+}

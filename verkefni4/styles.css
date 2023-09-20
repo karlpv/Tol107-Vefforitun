@@ -68,16 +68,21 @@ a {
 h2,
 section {
   font-family: var(--font-family-base);
+  margin-bottom: var(--spacing);
 }
 
 h3 {
   font-family: var(--font-family-heading);
 }
 
+h1 {
+  font-family: var(--font-family-heading);
+}
+
 img {
   max-width: 100%;
-  object-fit: inherit;
-  object-position: initial;
+  object-fit: cover;
+  object-position: top center;
   max-height: 400px;
 }
 
@@ -87,7 +92,10 @@ body > header {
   padding: 1rem;
   background-color: #2f0505;
   color: #fff1cf;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*** Valmynd ***/
@@ -95,36 +103,38 @@ body > header {
 nav {
   border-bottom: 8px solid #ffe7ae;
   margin-bottom: var(--spacing);
-  padding: var(--spacing);
+  padding:0.5rem;
   background-color: #fff9ee;
   color: var(--color-dark);
-  font-family: var(--font-family-heading);
 }
 
 nav ul {
-  list-style: none;
-  text-align: center;
+  display: flex; /* Make this a flex container */
+  justify-content: center; /* Center items horizontally */
 }
 
 nav ul li {
-  display: inline-flex;
-  margin-right: 1rem;
+  display: flex; /* Make this a flex container */
+  justify-content: space-between; /* Evenly spaced items */
+  padding: 0.5rem;
+  font-family: var(--font-family-base);
 }
 
 /*** Meginmál ***/
 
 main {
   margin: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
   max-width: 900px;
+  font-family: var(--font-family-base);
 }
 
 /*** Fótur ***/
 
 footer {
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: var(--spacing);
+  padding: var(--spacing);
   border-top: 8px solid #ffe7ae;
   background-color: #2f0505;
   color: #fff1cf;
@@ -136,13 +146,16 @@ footer {
 footer > section {
   text-align: center;
   vertical-align: top;
+  margin-bottom: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Adds a gap between the child elements */
 }
 
 footer ul {
   list-style: none;
   text-align: center;
 }
-
 
 /*** Box! ***/
 
@@ -156,7 +169,6 @@ footer ul {
   margin-bottom: 2rem;
   display: inline-flex;
   flex-direction: column; /* Stack content vertically */
-  margin-right: 1%;
   width: 48%; /* Each box takes up 48% of the parent container */
   box-sizing: border-box; /* To make sure padding and borders are included in total width */
   background-color: #fff1cf;
@@ -165,11 +177,7 @@ footer ul {
 
 .boxes .box h3 {
   border-bottom: 1px solid black; /* Add line under h3 */
-  margin-bottom: 1rem;
-}
-
-.boxes .box p {
-  margin-bottom: 0.5rem; /* Space below each paragraph */
+  margin-bottom: var(--spacing);
 }
 
 .boxes .box a {
@@ -177,6 +185,7 @@ footer ul {
   margin-top: auto;
   margin-bottom: 0.5rem;
   font-weight: bold;
+  padding-top: var(--spacing);
 }
 
 /*** Opnunartími ***/
@@ -186,15 +195,14 @@ dt {
 }
 
 dd {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing);
 }
 
 /*** Matseðill ***/
 
 table {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing);
   border-spacing: 0;
-  text-align: center;
 }
 
 table th,
@@ -209,9 +217,10 @@ table tbody tr:nth-child(2n + 1) {
 /*** Pöntunarform ***/
 
 fieldset {
-  margin-bottom: 1rem;
-  border: 1px solid #ffe7ae;
-  padding: 1rem;
+  margin-bottom: var(--spacing);
+  border: 2px solid --color-dark;
+  border-radius: var(--border-radius);
+  padding: var(--spacing);
 }
 
 fieldset legend {
@@ -224,17 +233,18 @@ fieldset div {
 
 fieldset div label {
   display: flex;
+  align-items: center; /* Align items vertically centered */
+}
+
+fieldset input[type="checkbox"] {
+  display: flex;
+  align-self: center; /* Aligns the checkbox vertically centered within the label */
 }
 
 fieldset input,
 fieldset select,
 fieldset textarea {
   padding: 0.5rem;
-}
-
-fieldset input[type="checkbox"] {
-  display: flex;
-  margin-right: 0.5rem;
 }
 
 form button {

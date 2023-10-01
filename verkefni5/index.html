@@ -5,13 +5,16 @@
   <meta charset="utf-8">
   <title>Veitingastaðurinn</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./grid.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description" content="Forsíða Veitingastaðsins, veitingastaður með allar þær veitingar sem þig vantar.">
   <meta property="og:title" content="Veitingastaðurinn">
   <meta property="og:description" content="Velkomin á Veitingastaðinn!">
   <meta property="og:image" content="./myndir/sharing.jpg">
 </head>
 
-<body>
+<body class="loaded">
   <div class="wrapper">
     <div class="header">
       <header>
@@ -57,17 +60,10 @@
           <a class="link" href="./sidur/um.html">Lesa meira um okkur</a>
         </section>
 
-        <section class="box">
-          <h3 class="title">Matseðill</h3>
-          <div class="content">
-            <p>Skoðaðu matseðilinn okkar!</p>
-          </div>
-          <a class="link" href="./sidur/matsedill.html">Skoða matseðilinn</a>
-        </section>
-
+        
         <section class="box">
           <h3 class="title">Panta</h3>
-          <div class="contnet">
+          <div class="content">
             <p>Pantaðu borð eða mat heim til þín!</p>
           </div>
           <a class="link" href="./sidur/pontun.html">Senda inn pöntun</a>
@@ -76,7 +72,6 @@
 
       <section class="popular">
         <h2>Vinsælir réttir</h2>
-
         <ul class="boxes">
           <li class="box">
             <h3 class="title">Súpa dagsins</h3>
@@ -84,7 +79,7 @@
               <p>Daglega ný súpa</p>
               <p>2.100 kr.-</p>
             </div>
-            <a class="link" href="./sidur/panta.html">Panta</a>
+            <a class="link" href="./sidur/pontun.html">Panta</a>
           </li>
           <li class="box">
             <h3 class="title">Lasagna</h3>
@@ -92,7 +87,7 @@
               <p>Lasagna með fersku salati</p>
               <p>2.500 kr.-</p>
             </div>
-            <a class="link" href="./sidur/panta.html">Panta</a>
+            <a class="link" href="./sidur/pontun.html">Panta</a>
           </li>
           <li class="box">
             <h3 class="title">Pizza</h3>
@@ -100,7 +95,7 @@
               <p>Klassísk pizza</p>
               <p>2.000 kr.-</p>
             </div>
-            <a class="link" href="./sidur/panta.html">Panta</a>
+            <a class="link" href="./sidur/pontun.html">Panta</a>
           </li>
           <li class="box">
             <h3 class="title">Hamborgari</h3>
@@ -108,10 +103,26 @@
               <p>Hamborgari með frönskum kartöflum</p>
               <p>2.500 kr.-</p>
             </div>
-            <a class="link" href="./sidur/panta.html">Panta</a>
+            <a class="link" href="./sidur/pontun.html">Panta</a>
+          </li>
+          <li class="box">
+            <h3 class="title">Súpa dagsins</h3>
+            <div class="content">
+              <p>Daglega ný súpa</p>
+              <p>2.100 kr.-</p>
+            </div>
+            <a class="link" href="./sidur/pontun.html">Panta</a>
+          </li>   <li class="box">
+            <h3 class="title">Súpa dagsins</h3>
+            <div class="content">
+              <p>Daglega ný súpa</p>
+              <p>2.100 kr.-</p>
+            </div>
+            <a class="link" href="./sidur/pontun.html">Panta</a>
           </li>
         </ul>
-        <p><a href="./sidur/matsedill.html">Skoða matseðil</a> eða <a href="./sidur/panta.html">panta</a>.</p>
+        <p><a class="link" href="./sidur/matsedill.html">Skoða matseðil</a>
+          <a a class="link" href="./sidur/pontun.html">Panta Mat</a>.</p>
       </section>
     </main>
 

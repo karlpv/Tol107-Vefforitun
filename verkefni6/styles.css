@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +10,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -19,13 +20,13 @@ html {
   font-family: "Lora";
   font-style: normal;
   font-display: swap;
-  src: url(./fonts/Lora-VariableFont_wght.ttf) format("woff");
+  src: url("./fonts/Lora-VariableFont_wght.ttf") format("woff");
 }
 @font-face {
   font-family: "Noto Sans Display";
   font-style: normal;
   font-display: swap;
-  src: url(./fonts/NotoSansDisplay-VariableFont.ttf) format("woff");
+  src: url("./fonts/NotoSansDisplay-VariableFont.ttf") format("woff");
 }
 /* Almennt */
 html,
@@ -86,6 +87,7 @@ img {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -94,10 +96,12 @@ img {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 .header,
 .main {
   animation: 600ms ease-in-out fade-in;
@@ -186,13 +190,16 @@ img {
     grid-template-rows: auto;
     max-width: 1400px;
   }
+
   .footer section {
     grid-column-end: span 4;
   }
+
   .footer section:first-child {
     grid-column-start: 3;
   }
 }
+
 .footer ul {
   list-style: none;
 }
@@ -210,6 +217,7 @@ img {
     grid-template-columns: repeat(12, 1fr);
   }
 }
+
 .boxes .box {
   grid-column: span 12;
   display: flex;
@@ -222,13 +230,16 @@ img {
   background-color: #fff1cf;
   border-radius: 5px;
 }
+
 .boxes .box .title {
   margin-bottom: calc(1rem * 0.5);
   border-bottom: 1px solid #2f0505;
 }
+
 .boxes .box .content {
   flex: 1;
 }
+
 .boxes .box img {
   max-height: 400px;
   object-fit: cover;
@@ -243,6 +254,7 @@ img {
   .boxes .box {
     grid-column: span 4;
   }
+
   .boxes .box img {
     max-height: 350px;
   }
@@ -261,12 +273,14 @@ dd {
 table {
   border-spacing: 0;
 }
+
 table th,
 table td {
   padding: calc(1rem * 0.5);
   text-align: left;
 }
-table tbody tr:nth-child(2n+1) {
+
+table tbody tr:nth-child(2n + 1) {
   color: #2f0505;
   background-color: #ffe7ae;
 }
@@ -275,22 +289,27 @@ table tbody tr:nth-child(2n+1) {
 fieldset {
   border: 1px solid #2f0505;
 }
+
 fieldset legend {
   font-weight: bold;
 }
+
 fieldset div label {
   display: flex;
   flex-direction: column;
 }
+
 fieldset input,
 fieldset select,
 fieldset textarea {
   padding: calc(1rem * 0.5);
   width: 100%;
 }
-fieldset input[type=checkbox] {
+
+fieldset input[type="checkbox"] {
   width: auto;
 }
+
 fieldset .checkbox label {
   flex-direction: row;
   gap: calc(1rem * 0.5);
@@ -336,5 +355,3 @@ html::before {
   z-index: 1000;
   pointer-events: none;
 }
-
-/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,39 @@
+//buttons.scss 
+@import "breytur";
+
+/* Takki */
+
+.button {
+  display: inline-block;
+
+  border: $border-small solid $color-dark;
+  border-radius: $border-radius;
+  padding: calc(#{$spacing} / 2) #{$spacing};
+
+  font-family: $font-family-base;
+  text-decoration: none;
+  text-align: center;
+
+  color: $color-light;
+  background-color: $color-dark;
+
+  transition: background-color $transition-time-short
+      $transition-timing-function,
+    color $transition-time-short $transition-timing-function;
+}
+
+.button:hover {
+  color: $color-dark;
+  background-color: $color-gold;
+}
+
+/* Fade in animation */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

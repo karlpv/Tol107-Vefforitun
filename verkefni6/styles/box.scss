@@ -1,0 +1,62 @@
+//box.scss
+@import "breytur";
+
+/* Box! */
+
+.boxes {
+  display: grid;
+  grid-template-rows: auto;
+  gap: $vertical-space;
+  justify-items: center;
+
+  width: 100%;
+
+  @media (min-width: 500px) {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+
+  .box {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+    padding: calc(#{$spacing} * 0.5);
+    width: 100%;
+    min-height: 100px;
+    color: $color-dark;
+    background-color: $color-gold-light;
+    border-radius: 5px;
+
+    .title {
+      margin-bottom: calc(#{$spacing} * 0.5);
+      border-bottom: $border-small solid $color-dark;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    img {
+      max-height: 400px;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+
+  @media (min-width: 500px) {
+    .box {
+      grid-column: span 6;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .box {
+      grid-column: span 4;
+
+      img {
+        max-height: 350px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+//layout.scss
+@import "breytur";
+
+.header,
+.main {
+  animation: $transition-time-long $transition-timing-function fade-in;
+}
+
+/* Layout */
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+
+  // grid items eru miðjuð
+  justify-items: center;
+
+  gap: $vertical-space;
+}
+
